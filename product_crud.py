@@ -10,7 +10,6 @@ client = MongoClient(
 db = client["retail_store"]
 products = db["products"]
 
-# Every product must have a unique SKU
 products.create_index("sku", unique=True)
 
 
